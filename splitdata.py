@@ -19,9 +19,10 @@ args = parser.parse_args()
 sequenceArray=[]
 yearArray=[]
 
-    
+#The cluster input file contains lines in the following format:
+# <Tape location> , <Year> , <Sound Pattern>
 
-with open("output_21.txt", "r") as ins:
+with open("output_21.txt", "r") as ins:  
     for line in ins:
         yearArray.append(line.split(',')[1].split('_')[0].strip().replace('\n',''))
         sequenceArray.append(line.split(',')[2].strip().replace('\n',''))
